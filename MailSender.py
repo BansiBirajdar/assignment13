@@ -59,7 +59,7 @@ def Send(filename,toaddr,scannfile_count,D_count,Starting_time):
 
         s.starttls() 
 
-        s.login(fromaddr, "9049331139") 
+        s.login(fromaddr, "9049******") 
 
         text = msg.as_string() 
 

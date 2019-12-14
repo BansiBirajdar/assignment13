@@ -129,10 +129,10 @@ Mail ID of the receiver")
             print("Error :invalid number of arguments")
             exit()
     try:
-        if mailcheck.check(sys.argv[2]):
+        if mailcheck.check(sys.argv[3]):
             connected=Conn.is_connected()
             if connected:
-                schedule.every(1).minute.do(DirectoryDusplicate,path=sys.argv[1],mailId=sys.argv[2])
+                schedule.every(int(sys.argv[2])).minute.do(DirectoryDusplicate,path=sys.argv[1],mailId=sys.argv[3])
                 while True:
                     schedule.run_pending()
                     time.sleep(1)
